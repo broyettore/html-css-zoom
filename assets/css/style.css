@@ -48,7 +48,6 @@ i {
 header {
     align-items: center;
     height: 40px;
-    border: 1px solid red;
 }
 
 header .header-icons {
@@ -65,18 +64,11 @@ header .header-icons .fa-maximize {
     margin: 0 5px;
 }
 
-
-
-
-
-
-
-
 /********************* MAIN********************
 ************************************************/
 
 main {
-    height: calc(100vh - 140px);
+    height: calc(100vh - 40px);
     width: 90%;
     padding: 30px 0;
     margin: 0 auto;
@@ -84,12 +76,11 @@ main {
 
 main .profile-ctn {
     flex-wrap: wrap;
-    border: 1px solid white;
 }
 
 main .profile-ctn .profile-user {
-    width: calc(100% / 7 - 6px);
-    margin: 3px;
+    width: calc(100% / 7 - 12px);
+    margin: 6px 3px;
     position: relative;
 }
 
@@ -107,18 +98,10 @@ main .profile-ctn .profile-info {
     left: 0;
 }
 
-
-
-
-
-
-
-
 /********************* FOOTER ********************
 ************************************************/
 
 footer {
-    height: 100px;
     border: 1px solid red;
 }
 
