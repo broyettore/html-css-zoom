@@ -21,8 +21,9 @@ body {
 /********************* REUSABLE CSS ********************
 ********************************************************/
 
-.row {
+.row, .align {
     display: flex;
+    align-items: center;
 }
 
 header .header-icons .fa-table-cells,
@@ -37,22 +38,25 @@ i {
     cursor: pointer;
 }
 
+header .header-icons,
+footer .footer-ctn {
+    width: 100%;
+}
 
-
-
-
+footer .footer-ctn .audio-video .smaller,
+footer .footer-ctn .nav-menu .smaller {
+    font-size: 1.2rem;
+}
 
 /********************* HEADER ********************
 ************************************************/
 
 header {
-    align-items: center;
-    height: 40px;
+    height: 60px;
 }
 
 header .header-icons {
     justify-content: flex-end;
-    width: 100%;
 }
 
 header .header-icons i span {
@@ -68,14 +72,13 @@ header .header-icons .fa-maximize {
 ************************************************/
 
 main {
-    height: calc(100vh - 40px);
-    width: 90%;
-    padding: 30px 0;
-    margin: 0 auto;
+    height: calc(100vh - 129px);
 }
 
 main .profile-ctn {
     flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
 }
 
 main .profile-ctn .profile-user {
@@ -102,7 +105,51 @@ main .profile-ctn .profile-info {
 ************************************************/
 
 footer {
-    border: 1px solid red;
+    background-color: #222222;
+    margin-top: 50px;
 }
+
+footer .footer-ctn {
+    justify-content: space-between;
+}
+
+footer .footer-ctn i {
+    font-size: 2.4rem;
+}
+
+footer .footer-ctn .audio-video .smaller {
+    margin: 0 5px;
+}
+
+
+footer .footer-ctn .exit h4 {
+    background-color: #4a4a4a;
+    color: #95231a;
+    font-size: 1.4rem;
+    padding: 26px 10px;
+}
+
+.audio, .video,
+footer .footer-ctn .nav-menu .btn {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+}
+
+.audio i, .video i,
+.footer-ctn .nav-menu .btn i {
+    margin-bottom: 5px;
+}
+
+
+.smaller {
+    font-size: 1rem;
+}
+
+.green {
+    color: #4bc800;
+}
+
 
 
