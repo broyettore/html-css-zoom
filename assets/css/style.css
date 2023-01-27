@@ -14,6 +14,7 @@ html {
 }
 
 body {
+    height: 100vh;
     background-color: #000000;
     color: #fff;
 }
@@ -52,7 +53,7 @@ footer .footer-ctn .nav-menu .smaller {
 ************************************************/
 
 header {
-    height: 60px;
+    height: 40px;
 }
 
 header .header-icons {
@@ -72,24 +73,56 @@ header .header-icons .fa-maximize {
 ************************************************/
 
 main {
-    height: calc(100vh - 129px);
+    height: calc(100vh - 120px);
+    overflow: auto;
 }
+
+::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #000000;
+    border: 0px none #ffffff;
+    border-radius: 11px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+  }
+  ::-webkit-scrollbar-thumb:active {
+    background: #000000;
+  }
+  ::-webkit-scrollbar-track {
+    background: #040803;
+    border: 0px none #ffffff;
+    border-radius: 14px;
+  }
+  ::-webkit-scrollbar-track:hover {
+    background: #666666;
+  }
+  ::-webkit-scrollbar-track:active {
+    background: #333333;
+  }
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
 
 main .profile-ctn {
     flex-wrap: wrap;
-    width: 90%;
+    width: 90vw;
     margin: 0 auto;
 }
 
 main .profile-ctn .profile-user {
-    width: calc(100% / 7 - 12px);
-    margin: 6px 3px;
+    width: calc(90vw / 7);
     position: relative;
 }
 
 main .profile-ctn .profile-user img {
     display: block;
     width: 100%;
+    padding: 5px;
 }
 
 main .profile-ctn .profile-info {
@@ -97,16 +130,16 @@ main .profile-ctn .profile-info {
     font-size: 1.3rem;
     padding: 4px;
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: 5px;
+    left: 5px;
 }
 
 /********************* FOOTER ********************
 ************************************************/
 
 footer {
+    height: 80px;
     background-color: #222222;
-    margin-top: 50px;
 }
 
 footer .footer-ctn {
@@ -117,39 +150,53 @@ footer .footer-ctn i {
     font-size: 2.4rem;
 }
 
-footer .footer-ctn .audio-video .smaller {
-    margin: 0 5px;
+footer .footer-ctn .left,
+footer .footer-ctn .right { 
+    width: 15%;
 }
 
+footer .footer-ctn .right {
+    justify-content: flex-end;
+}
 
-footer .footer-ctn .exit h4 {
+footer .footer-ctn .right .exit {
     background-color: #4a4a4a;
-    color: #95231a;
-    font-size: 1.4rem;
-    padding: 26px 10px;
+    color: red;
+    padding: 0 30px;
+    height: 80px;
+    border: 0;
 }
 
-.audio, .video,
-footer .footer-ctn .nav-menu .btn {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 15px;
+
+
+.left .btn-ctn-left .btn,
+.center .btn {
+    background-color: #222222;
+    color: #fff;
+    border: 0;
 }
 
-.audio i, .video i,
-.footer-ctn .nav-menu .btn i {
+.footer-ctn .center .btn,
+.footer-ctn .left .btn-ctn-left  {
+    padding: 0 10px;
+}
+
+.left .btn-ctn-left .btn i,
+.center .btn i {
     margin-bottom: 5px;
 }
 
-
-.smaller {
-    font-size: 1rem;
+.left .btn-ctn-left .arrow i,
+.center .arrow i {
+    font-size: 1.3rem;
 }
+
+
+
+
 
 .green {
     color: #4bc800;
 }
-
 
 
